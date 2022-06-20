@@ -13,7 +13,7 @@ $(document).ready(function(){
         // }
     })
 
-    // a funcao abaixa eh usada para o clique do menu hamburg, para esconder ou mostrar o menu
+    // a funcao abaixo eh usada para o clique do menu hamburg, para esconder ou mostrar o menu
     $('.menu-btn').click(function(){
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
