@@ -114,20 +114,11 @@
     display: none;
 }
 
-/*? -- session - sobre -- */
+/** -- TODOS OS CODIGO SIMILARES -- */
 section{
     padding: 100px 0;
 }
-.about{
-    font-family: 'Roboto', sans-serif;
-}
-.about .about-content{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between; /* espaco entre os cards de sobre */
-}
-.about .title{
+section .title{
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
     font-size: 40px;
@@ -137,7 +128,8 @@ section{
     position: relative;
     color: #00804b;
 }
-.about .title::before{ /* traco abaixo do SOBRE*/
+/* .about .title::before{ traco abaixo do SOBRE */
+section .title::before{ /* traco abaixo do SOBRE*/
     content: "";
     position: absolute;
     bottom: 0; /*coloca traco abaixo do SOBRE*/
@@ -147,8 +139,8 @@ section{
     background: #111;
     transform: translate(-50%); /* CENTRALIZA O TRACO*/
 }
-.about .title::after{ /* traco e "Quem sou eu" abaixo do SOBRE */
-    content: "Quem sou eu";
+section .title::after{ /* traco e "Quem sou eu" abaixo do SOBRE */
+    /* content: "Quem sou eu"; */
     position: absolute;
     bottom: -12px; /* listra do lado do Quem sou eu */
     left: 50%; /* CENTRALIZA O TRACO na horizontal */
@@ -160,23 +152,89 @@ section{
     padding: 5px;
     transform: translate(-50%); /* CENTRALIZA O TRACO*/
 }
-.about .about-content .column-left{ /* ajusta o conteudo do card */
+
+/*? -- session - sobre -- */
+.about, .services{
+    font-family: 'Roboto', sans-serif;
+}
+.about .about-content
+.services .serv-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; /* espaco entre os cards de sobre */
+}
+/* .about .title{ */
+/* .about .title::after{ traco e "Quem sou eu" abaixo do SOBRE */
+.about .title::after{
+    content: "Quem sou eu";
+}
+.about .about-content .left{ /* ajusta o conteudo do card */
     width: 45%;
 }
-.about .about-content .column-right{ /* ajusta o conteudo do card */
+.about .about-content .right{ /* ajusta o conteudo do card */
     width: 55%;
 }
-.about .about-content .column-left img{
+.about .about-content .right .text{ /* Parte do conteudo do Card: "Sou Gustavo e sou Youtuber"*/
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{ /* Parte do conteudo do Card, contido na span"*/
+    color: #00804b;
+}
+.about .about-content .right p{ /* Parte do conteudo do Card, contido no p . Justifica o texto"*/
+    text-align: justify;
+}
+.about .about-content .right a{ /* tag a do download do CV */
+    display: inline-block;
+    background-color: #00804b;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+
+    border: 2px solid #00804b;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{ /* tag a do download do CV */
+    color: #00804b;
+    background: none;
+}
+
+.about .about-content .left img{
     width: 400px;
     height: 400px;
     object-fit: cover;
     border-radius: 6px;
 }
 
+/*sessao servicos */
+.services{
+    background: #111;
+    color: #fff;
+}
+.services .title::after{
+    content: "Que ofereçemos";
+}
+
 /*todo responsivo */
-@media (max-width: 1104px){
+@media (max-width: 1300px){
     .navbar .max-width{
         margin-left: 0;
+    }
+}
+@media (max-width: 1104px){
+    /* .navbar .max-width{
+        margin-left: 0;
+    } */
+    .about .about-content .left img{ /* ajusta os cards e seus textos */
+        width: 350px;
+        height: 350px;
+        /* object-fit: cover;
+        border-radius: 6px; */
     }
 }
 @media (max-width: 991px){
@@ -186,6 +244,7 @@ section{
 }
 @media (max-width: 947px){
     .max-width{
+        max-width: 800px;
         padding: 0 50px;
     }
     .menu-btn{ /* icone hamburg*/
@@ -226,6 +285,17 @@ section{
     .home .home-content a{
         font-size: 23px;
         padding: 10px 30px;
+    }
+    .about .about-content .column{
+        width: 50%;
+    }
+    .about .about-content .left{ /*ajusta o card e texto responsivo lado esquerdo da column*/
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{ /*centraliza a imagem do card e joga o texto para baixo, centralizado*/
+        flex: 100%;
     }
 }
 @media (max-width: 690px){
