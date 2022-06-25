@@ -11,7 +11,7 @@
     margin: auto;
 }
 
-/*? navbar - inicio */
+/*? --- NAVBAR - inicio --- */
 .navbar{
     position: fixed;
     width: 100%;
@@ -61,8 +61,9 @@
     /* color: #00804b; */
     color:#fff;
 }
+/*? --- NAVBAR - fim --- */
 
-/*! home - inicio */
+/*! --- HOME - inicio --- */
 .home{
     display: flex;
     background: url(image/banner.png) no-repeat center;
@@ -105,16 +106,18 @@
     color: #00804b;
     background: none;
 }
+/*! --- HOME - fim --- */
 
-/*! Menu mobile */
+/** --- MENU MOBILE - inicio --- */
 .menu-btn{
     color: #fff;
     font-size: 26px;
     cursor: pointer;
     display: none;
 }
+/** --- MENU MOBILE - fim --- */
 
-/** -- TODOS OS CODIGO SIMILARES -- */
+/*? --- TODOS OS CODIGO SIMILARES - inicio --- */
 section{
     padding: 100px 0;
 }
@@ -152,18 +155,21 @@ section .title::after{ /* traco e "Quem sou eu" abaixo do SOBRE */
     padding: 5px;
     transform: translateX(-50%); /* CENTRALIZA O TRACO*/
 }
-
-/*? -- session - sobre -- */
-.about, .services{
+.about, .services, .skills, .teams, .contact{
     font-family: 'Roboto', sans-serif;
 }
 .about .about-content,
-.services .serv-content{
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between; /* espaco entre os cards de sobre */
 }
+/*? --- TODOS OS CODIGO SIMILARES - fim --- */
+
+/*todo --- SESSAO - SOBRE - inicio --- */
 /* .about .title{ */
 /* .about .title::after{ traco e "Quem sou eu" abaixo do SOBRE */
 .about .title::after{
@@ -193,7 +199,7 @@ section .title::after{ /* traco e "Quem sou eu" abaixo do SOBRE */
     color: #fff;
     font-size: 20px;
     font-weight: 500;
-    padding: 10px 20px;
+    padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
 
@@ -211,19 +217,23 @@ section .title::after{ /* traco e "Quem sou eu" abaixo do SOBRE */
     object-fit: cover;
     border-radius: 6px;
 }
+/*todo --- SESSAO - SOBRE - fim --- */
 
-/*sessao servicos */
-.services{
+.services, .teams{ /* aplica o fundo preto e texto em branco para a parte de serviços e equipe*/
     background: #111;
     color: #fff;
 }
-.services .title::before{ /* traco branco atras do "Que oferecemos"*/
+.services .title::before,
+.teams .title::before{ /* traco branco atras do "Que oferecemos", em Servicos, e "Especializadas", em Equipes */
     background: #fff;
 }
-.services .title::after{ /* fundo preto do "Que oferecemos */
+.services .title::after,
+.teams .title::after{ /* fundo preto do "Que oferecemos", em Servicos, e "Especializadas", em Equipes */
     background: #111;
     content: "Que ofereçemos";
 }
+
+/*todo --- SESSAO - SERVICOS - inicio --- */
 .services .serv-content .card{ 
     width: calc(33% - 20px); /* divide a horizontal em 3 */
     background: #222; /* fundo cinza */
@@ -254,8 +264,184 @@ section .title::after{ /* traco e "Quem sou eu" abaixo do SOBRE */
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+/*todo --- SESSAO - SERVICOS - fim --- */
 
-/*todo responsivo */
+/*todo --- SESSAO - ESPECIALIDADES - inicio ---*/
+.skills .title::after{
+    content: "Que faço";
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text{ /* titulo da coluna esquerda de especialidades*/
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{ /* ajusta o texto da coluna esquerda de especialidades*/
+    text-align: justify;
+}
+.skills .skills-content .left a{ /* tag a do 'mais informaçoes": o mesmo estilo que -> '.about .about-content .right a', mundando somente os valores */
+    display: inline-block;
+    background: #00804b;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+
+    border: 2px solid #00804b;
+    transition: all 0.3s ease;
+}
+.skills .skills-content .left a:hover{
+    color: #00804b;
+    background: none;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{ /* distancia o tipo de especialid da % dessa especialid */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .line{ /* barra cinza referindo-se aos 100% de cada bar*/
+    width: 100%;
+    height: 5px;
+    background: #ccc;
+    position: relative;
+}
+.skills .skills-content .right .line::before{ /* caracteristicas gerais da barra verde de progressao*/
+    content: "";
+    position: absolute;
+    /* width: 80%; */
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #00804b;
+}
+.skills .skills-content .right .html::before{  /* barra de progressao de html*/
+    width: 83%;
+}
+.skills .skills-content .right .css::before{ 
+    width: 80%;
+}
+.skills .skills-content .right .js::before{ 
+    width: 79%;
+}
+.skills .skills-content .right .php::before{ 
+    width: 88%;
+}
+.skills .skills-content .right .mysql::before{ 
+    width: 87%;
+}
+/*todo --- SESSAO - ESPECIALIDADES - fim ---*/
+
+/*todo --- SESSAO - EQUIPE - inicio ---*/
+.teams .title::after{
+    content: "Especializada";
+}
+.teams .carousel .card{ /* prepara os boxes de cada card do carousel */
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center; /* centraliza os textos de cada card*/
+    transition: all 0.3s ease /* suaviza o efeito de transicao qdo hover*/;
+}
+.teams .carousel .card:hover{ /* efeito hover nos cards do carousel*/
+    background: #00804b;
+}
+.teams .carousel .card img{ /* redimensiona as imgs no carousel */
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* dimensiona a img para nao distorcer*/
+    border-radius: 50%; /* deixa a img redonda */
+    border: 5px solid #00804b;
+    transition: all 0.3s ease; /* suaviza o efeito de transicao qdo hover*/;
+}
+.teams .carousel .card:hover img{
+    border-color: #fff;
+}
+.teams .carousel .card .box{ /**/
+    display: flex;
+    flex-direction: column; /* alinha a img e o referente texto do card abaixo */
+    align-items: center; /*centraliza a img na horizontal */
+    justify-content: center;
+    transition: all 0.3s ease; /* suaviza o efeito de transicao qdo hover*/;
+}
+.teams .carousel .card:hover .box{
+    transform: scale(1.05); /* efeito de salto do texto qdo hover*/
+}
+.teams .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+/**  o bloco abaixo precisa ter importado o carousel owl - inicio*/
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{ /* evidencia os dots do carousel */
+    width: 14px;
+    height: 14px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid #00804b!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 15px; /*efeito ovalado retangular no bol do carousel selecionado*/
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: #00804b!important;
+}
+/**  o bloco acima precisa ter importado o carousel owl - fim*/
+/*todo --- SESSAO - EQUIPE - fim ---*/
+
+/*todo --- SESSAO - CONTATO - inicio ---*/
+.contact .contact-content .column{
+    width: calc(50% - 30px); /* separa as duas colunas divs*/
+}
+.contact .contact-content .left p{
+    text-align: justify; /* justifica os textos */
+}
+.contact .contact-content .text{ /* efeitos do "Fale Conosco" */
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{ /* estilos dos blocos nome, endereco e email*/
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px; /* espaco entre os icones e os labels: nome, endereco e email*/
+}
+.contact .contact-content .row .info .head{
+    font-weight: 500; /* negrito em nome, endereco e email*/
+}
+.contact .contact-content .row .info .sub-title{
+    color: #333; /* suaviza a cor para os conteudos de nome, endereco e email*/
+}
+.contact .contact-content .row ion-icon{
+    font-size: 25px;
+    color: #00804b;
+}
+/*todo --- SESSAO - CONTATO - fim ---*/
+
+/*! --- RESPONSIVO - inicio --- */
 @media (max-width: 1300px){
     .navbar .max-width{
         margin-left: 0;
@@ -336,6 +522,10 @@ section .title::after{ /* traco e "Quem sou eu" abaixo do SOBRE */
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+    .skills .skills-content .column{ /* redimensiona as colunas de especialidades*/
+        width: 100%;
+        margin-bottom: 35px;
+    }
 }
 @media (max-width: 690px){
     .home .home-content .text-2{
@@ -358,4 +548,16 @@ section .title::after{ /* traco e "Quem sou eu" abaixo do SOBRE */
     .home .home-content .text-3{
         font-size: 27px;
     }
+    /*todo --- BY GUST - inicio --- */
+    .about .title::after{
+        font-size: 50%;
+        content: "Quem sou eu";
+    }
+    .services .title::after{ /* fundo preto do "Que oferecemos */
+        font-size: 40%;
+        background: #111;
+        content: "Que ofereçemos";
+    }
+    /*todo --- BY GUST - fim --- */
 }
+/*! --- RESPONSIVO - fim --- */
