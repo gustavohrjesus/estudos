@@ -1,16 +1,35 @@
 $(document).ready(function(){
     $(window).scroll(function(){
-        if(this.scrollY > 20){//class sticky esta no css
+        if(this.scrollY > 20){//class sticky esta no css - 
             $('.navbar').addClass("sticky")
         } else {
             $('.navbar').removeClass("sticky")
         }
 
-        // if(this.scrollY > 500){
-        //     $('.scroll-up-btn').addClass("show");
-        // }else{
-        //     $('.scroll-up-btn').removeClass("show");
-        // }
+        if(this.scrollY > 500){ //class show esta no css - botao voltar ao topo
+            $('.scroll-up-btn').addClass("show");
+        }else{
+            $('.scroll-up-btn').removeClass("show");
+        }
+    })
+
+    // funcao do botao voltar ao topo
+    $('.scroll-up-btn').click(function(){
+        $('html').animate({ scrollTop: 0 })
+    })
+
+    // funcao typed - EFEITO DE DIGITACAO DINAMICA - 
+    var typed = new Typed(".typing", {
+        strings: ["Youtuber","Desenvolvedor","Designer","Freelancer"],
+        typeSpeed:100,
+        backSpeed:60,
+        loop:true
+    })
+    var typed = new Typed(".typing-2", {
+        strings: ["Youtuber","Desenvolvedor","Designer","Freelancer"],
+        typeSpeed:100,
+        backSpeed:60,
+        loop:true
     })
 
     // a funcao abaixo eh usada para o clique do menu hamburg, para esconder ou mostrar o menu
