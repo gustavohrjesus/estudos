@@ -66,7 +66,13 @@
 
 
 ## CRIANDO NOVA BRANCH
-##### ```git checkout -b "nome da nova branch"```
+##### ```git checkout -b "nome_da_nova_branch"```
+
+### COMMITANDO A NOVA BRANCK
+##### ```git commit -m "mensagem de desc da nova branch"```
+
+### EFETUANDO O PUSH DA NOVA BRANCH
+##### ```git push origin nome_da_nova_branch```
 
 
 # _**FLUXO NORMAL**_
