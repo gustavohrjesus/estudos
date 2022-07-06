@@ -64,3 +64,13 @@
 ##### git commit -m "Removendo submodulo"
 ##### rm -rf path/to/submodule
 
+
+# _**FLUXO NORMAL**_
+1. git status
+2. git add -A
+3. git commit -m "Mensagem"
+4. git push -u origin main
+
+> - Referências: :clap :eyes :muscle :+1
+![COMO USAR GIT E GITHUB NA PRÁTICA! - desde o primeiro commit até o pull request! 2/2](https://www.youtube.com/watch?v=UBAX-13g8OM)
+![Git and GitHub for Beginners Tutorial](https://www.youtube.com/watch?v=tRZGeaHPoaw&t=1457s)
