@@ -65,6 +65,10 @@
 ##### rm -rf path/to/submodule
 
 
+## CRIANDO NOVA BRANCH
+##### git checkout -b "nome da nova branch"
+
+
 # _**FLUXO NORMAL**_
 1. git status
 2. git add -A
