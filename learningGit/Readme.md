@@ -74,6 +74,16 @@
 ### EFETUANDO O PUSH DA NOVA BRANCH
 ##### ```git push origin nome_da_nova_branch```
 
+### EFETUANDO O MERGE DA BRANCH SECUNDARIA COM A MAIN
+#### 1. Primeiro voltamos para a BRANCH main
+##### ```git checkout main```
+#### 2. Então efetuamos o MERGE da branch que queremos juntar com a principal (main)
+##### ```git merge nome_da_nova_branch```
+#### 3. Então efetuamos um push na main
+##### ```git push origin main```
+#### 4. Por fim, excluímos a branch secundária, pois não iremos mais usá-la
+##### ```git branch -d nome_da_nova_branch```
+
 
 # _**FLUXO NORMAL**_
 1. git status
