@@ -24,6 +24,8 @@
 ###### É a conexão do repo local com o remoto, de nome "origin"
 #### TIVEMOS PROBLEMA PARA EFETUAR O PUSH. Para isto, mudamos a url do "origin", conforme abaixo (by https://careerkarma.com/blog/git-fatal-remote-origin-already-exists/):
 ###### git remote set-url origin https://github.com/gustavohrjesus/estudos.git
+###### git remote set-url origin https://<tokenCriadoNoGitHub>@github.com/gustavohrjesus/estudos.git
+
 
 #### - git push -u origin main: envia do repositorio local para o repositorio remoto (para o GitHub) 
 ##### git push -u origin main: sending from the local repository to the remote repository (to the GitHub)
