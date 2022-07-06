@@ -91,7 +91,7 @@
 1. git status
 2. git add -A
 3. git commit -m "Mensagem"
-4. git push -u origin main
+4. git push -u origin main [git push --all]
 
 ### Referências: :clap: :eyes: :muscle: :+1:
 > [COMO USAR GIT E GITHUB NA PRÁTICA! - desde o primeiro commit até o pull request! 2/2 - Rafaella Ballerini](https://www.youtube.com/watch?v=UBAX-13g8OM)
