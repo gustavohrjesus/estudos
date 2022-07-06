@@ -66,7 +66,7 @@
 
 
 ## CRIANDO NOVA BRANCH
-##### git checkout -b "nome da nova branch"
+##### ```git checkout -b "nome da nova branch"```
 
 
 # _**FLUXO NORMAL**_
