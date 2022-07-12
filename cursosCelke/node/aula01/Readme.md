@@ -28,7 +28,5 @@
 ```res.sendFile(__dirname + "/src/index.html")```
 
 
-
->- Após a instalação, Utilizar o pacote aula04 para ver o utilitario Nodemon em uso
-
-> Obs.: instalamos o nodemon dentro do diretorio /cursosCelke/node
+#OBSERVACOES:
+>- Instalamos o nodemon dentro do diretorio /cursosCelke/node
