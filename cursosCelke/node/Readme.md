@@ -26,6 +26,6 @@
 > Para carregar uma pagina HTML
 ```res.sendFile(__dirname + "/src/index.html")```
 
-
-#OBSERVACOES:
+# ___________________________________________________________
+# OBSERVACOES:
 >- Instalamos o nodemon dentro do diretorio /cursosCelke/node
