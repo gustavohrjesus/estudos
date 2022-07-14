@@ -1,11 +1,9 @@
-# AULA 05 - NODEMON - Como instalar o Nodemon no Node.js para o servidor recarregado automaticamente
+# AULA 08 - NODEMON - Como inserir com Node no banco de dados
+## **DESSA AULA EM DIANTE VAMOS UTILIZAR O aula07 COMO PACOTE PARA ESTUDOS**
 
-### NODEMON - sempre que houver alguma alteração no código e essa for salva, o Nodemon já restarta o servidor Node. Então, ao atualizarmos o navegador, esse já trará as novas informações.
+### Criando a coluna id na table users:
+`ALTER TABLE `users` ADD `id` INT NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`id`);`
 
-## Instalação do nodemon
-```npm install -g nodemon```
-#### -g refere-se a "global"
 
->- Após a instalação, Utilizar o pacote aula04 para ver o utilitario Nodemon em uso
 
 > Obs.: instalamos o nodemon dentro do diretorio /cursosCelke/node
