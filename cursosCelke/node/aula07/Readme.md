@@ -6,7 +6,7 @@
 ##### Apos a instalacao, ir na pasta onde foi instalado o MySQL e copiar o path dele para adicionar nas "Variaveis de ambiente" do Windows (Botao direito no Computador, Propriedades, Avancado, Variaveis de Ambiente, Variaveis do sistema), procurar "Path", selecione-o e clique em "Editar". Adicione o path do Bin e salve.
 ###### Obs.: O nosso MySQL foi instalado pelo WAMP. Assim, o path considerado deve ser o setado pelo WAMP (C:\wamp64\bin\mysql\mysql5.7.14\bin)
 
-# OBS.: todas as linhas de comando do MySQL devem terminar com ";"
+### OBS.: todas as linhas de comando do MySQL devem terminar com ";"
 
 #### Após acessado o MySQL pelo prompt de comando (abrimos o prompt do MySQL pela opção MySQL->MySQL Console, do WAMP, o qual precisa estar em execução), verificamos quais bases de dados possuímos, com o comando abaixo:
 ```SHOW DATABASES;```
@@ -45,13 +45,13 @@
 #### Alterando a codificação do BD "celke" para UTF8 (abaixo funciona somente pelo prompt)
 ```ALTER SCHEMA `celke` DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_unicode_ci; ```
 
-
-# INSTALANDO EXTENSÃO DO PACOTE MYSQL NO NOSSO PROJETO
-## Download da extensão MySQL (seguir os passos da url abaixo)
+# ----------------------------------
+## INSTALANDO EXTENSÃO DO PACOTE MYSQL NO NOSSO PROJETO
+### Download da extensão MySQL (seguir os passos da url abaixo)
 >- https://www.npmjs.com/package/mysql
 ```npm install mysql --save```
 
-## Importando o mysql no codigo e criando a var de conexao
+### Importando o mysql no codigo e criando a var de conexao
 ```const mysql = require('mysql')```
 ```var connection = mysql.createConnection({```
 ```    host: 'localhost',```
