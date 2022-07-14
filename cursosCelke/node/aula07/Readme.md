@@ -37,8 +37,9 @@
 [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
 #### Criando a tabela "contas_pagars" pela ferramenta gráfica:
-```CREATE TABLE `celke`.`contas_pagars` ( `id` INT NOT NULL AUTO_INCREMENT , `nome` VARCHAR(220) NULL , `valor` DOUBLE NULL , PRIMARY KEY (`id`));```
-```ALTER TABLE `celke`.`contas_pagars` CHARACTER SET = utf8, COLLATE = utf8_unicode_ci;```
+`CREATE TABLE `celke`.`contas_pagars` ( `id` INT NOT NULL AUTO_INCREMENT , `nome` VARCHAR(220) NULL , `valor` DOUBLE NULL , PRIMARY KEY (`id`));`
+
+`ALTER TABLE `celke`.`contas_pagars` CHARACTER SET = utf8, COLLATE = utf8_unicode_ci;`
 ###### OBS.: a linha "ALTER TABLE" acima, no phpmyadmin, deu erro. Então usamos a linha abaixo:
 ```ALTER TABLE `celke`.`contas_pagars` DEFAULT CHARSET=utf8 COLLATE utf8_unicode_ci;```
 
