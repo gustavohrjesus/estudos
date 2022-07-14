@@ -52,13 +52,14 @@
 ```npm install mysql --save```
 
 ### Importando o mysql no codigo e criando a var de conexao
-```const mysql = require('mysql')```
-```var connection = mysql.createConnection({```
-```    host: 'localhost',```
-```    user: 'me',```
-```    password: 'secret',```
-```    database: 'celke'```
-```})```
+```const mysql = require('mysql')
+var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'me',
+    password: 'secret',
+    database: 'celke
+})
+```
 ###### Obs.: podemos ter algum problema caso o MySQL seja uma versão superior a 8
 #### Caso de erro de "... Client does not support...", será necessário criar um novo usuario para o mysql (usar o console do mysql):
 ```mysql -h localhost -u root -p```
