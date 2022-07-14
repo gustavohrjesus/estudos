@@ -5,3 +5,5 @@
 
 ## Instalação do express
 ```npm install express --save```
+
+##### Umar pasta "node_modules" é criada após a instalação

@@ -45,6 +45,33 @@
 #### Alterando a codificação do BD "celke" para UTF8 (abaixo funciona somente pelo prompt)
 ```ALTER SCHEMA `celke` DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_unicode_ci; ```
 
+
+# INSTALANDO EXTENSÃO DO PACOTE MYSQL NO NOSSO PROJETO
+## Download da extensão MySQL (seguir os passos da url abaixo)
+>- https://www.npmjs.com/package/mysql
+```npm install mysql --save```
+
+## Importando o mysql no codigo e criando a var de conexao
+```const mysql = require('mysql')```
+```var connection = mysql.createConnection({```
+```    host: 'localhost',```
+```    user: 'me',```
+```    password: 'secret',```
+```    database: 'celke'```
+```})```
+###### Obs.: podemos ter algum problema caso o MySQL seja uma versão superior a 8
+#### Caso de erro de "... Client does not support...", será necessário criar um novo usuario para o mysql (usar o console do mysql):
+```mysql -h localhost -u root -p```
+#### Ainda no console do mysql (o nome e localhost devem estar entre apostrofos). Após o BY é a senha. No nosso caso: 123456:
+```CREATE USER '<nomeDoUsuario>'@'localhost IDENTIFIED WITH mysql_native_password BY '123456';'```
+#### Ainda no console do mysql, damos permissao para o novo usuario acessar a base de dados. Consideras apostrofos):
+```GRANT ALL PRIVILEGES ON * . * TO '<nomeDoUsuario>'@'localhost'; ```
+
+#### Uma vez finalizadas as permissões que você quer definir para os seus novos usuários, certifique-se sempre de recarregar todos os privilegios:
+```FLUSH PRIVILEGES;```
+
+
+
 # -----------------------------------------------------
 ##### Obs.: para excluir uma base de dados:
 >- ```DROP DATABASE <nomeBD>```
