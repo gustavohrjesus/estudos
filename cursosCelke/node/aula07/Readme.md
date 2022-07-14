@@ -1,7 +1,7 @@
 # AULA 07 - Como instalar o MySQL. Como instalar e usar o Workbench. Como realizar conexao Node x MySQL
 
 ## Download do MySQL (MySQL Community Downloads - gratuito) - MySQL Community Server 8.0.29
->- https://dev.mysql.com/downloads/mysql/
+[MySQL Community Server] (https://dev.mysql.com/downloads/mysql/)
 ##### Durante a instalação, escolher a opção "Server only".
 ##### Apos a instalacao, ir na pasta onde foi instalado o MySQL e copiar o path dele para adicionar nas "Variaveis de ambiente" do Windows (Botao direito no Computador, Propriedades, Avancado, Variaveis de Ambiente, Variaveis do sistema), procurar "Path", selecione-o e clique em "Editar". Adicione o path do Bin e salve.
 ###### Obs.: O nosso MySQL foi instalado pelo WAMP. Assim, o path considerado deve ser o setado pelo WAMP (C:\wamp64\bin\mysql\mysql5.7.14\bin)
@@ -34,7 +34,7 @@
 
 ## Download do MySQL Wokbench (MySQL Community Downloads - gratuito) - MySQL Workbench 8.0.29
 ### Ferramenta gerenciadora para manipular o BD de forma visual:
->- https://dev.mysql.com/downloads/workbench/
+[MySQL Workbench] (https://dev.mysql.com/downloads/workbench/)
 
 #### Criando a tabela "contas_pagars" pela ferramenta gráfica:
 ```CREATE TABLE `celke`.`contas_pagars` ( `id` INT NOT NULL AUTO_INCREMENT , `nome` VARCHAR(220) NULL , `valor` DOUBLE NULL , PRIMARY KEY (`id`));```
@@ -48,7 +48,7 @@
 # ----------------------------------
 ## INSTALANDO EXTENSÃO DO PACOTE MYSQL NO NOSSO PROJETO
 ### Download da extensão MySQL (seguir os passos da url abaixo)
->- https://www.npmjs.com/package/mysql
+[NPM - Extensão para MySQL] (https://www.npmjs.com/package/mysql)
 ```npm install mysql --save```
 
 ### Importando o mysql no codigo e criando a var de conexao

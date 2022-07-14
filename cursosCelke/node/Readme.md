@@ -2,37 +2,43 @@
 
 # AULA 01 - O QUE É NODE E COMO INSTALAR O NODE.JS NO WINDOWS
 ## Última versão do Node disponível para Windows 7
->- https://nodejs.org/download/release/v13.6.0/
+[Node-Última versão para Win7 - v13.06] (https://nodejs.org/download/release/v13.6.0/)
 
 ### Verificando a versão do Node instalada no computador
 ```node -v```
+***
 
 # AULA 02 - Como usar o Node.js na prática
 > Rodando o "Ola mundo" pela primeira vez
 ```node index.js```
+***
 
 # AULA 03 - Criar o servidor http na maquina com Node e imprimir o texto no navegador usando o Node
+***
 
 # AULA 04 - Como instalar o Express no Node.js e criar rotas no Node.js
 > Instalação do express
 ```npm install express --save```
 ##### Umar pasta "node_modules" é criada após a instalação.
 ##### --save é para salvar somente no pacote que estamos. No caso, na pasta aula04
+***
 
 # AULA 05 - Como instalar o Nodemon no Node.js para o servidor ser recarregado automaticamente
 > Instalação do nodemon
 ```npm install -g nodemon```
 >- -g refere-se a "global"
 #### O nodemon não restarta qdo a alteracao eh feita em um arquivo HTML.
+***
 
 # AULA 06 - Como carregar arquivo HTML no Node.js
 > Para carregar uma pagina HTML
 ```res.sendFile(__dirname + "/src/index.html")```
+***
 
 # AULA 07 - Como instalar o MySQL. Como instalar e usar o Workbench. Como realizar conexao Node x MySQL
 
 ## Download do MySQL (MySQL Community Downloads - gratuito) - MySQL Community Server 8.0.29
->- https://dev.mysql.com/downloads/mysql/
+[MySQL Community Server] (https://dev.mysql.com/downloads/mysql/)
 ##### Durante a instalação, escolher a opção "Server only".
 ##### Apos a instalacao, ir na pasta onde foi instalado o MySQL e copiar o path dele para adicionar nas "Variaveis de ambiente" do Windows (Botao direito no Computador, Propriedades, Avancado, Variaveis de Ambiente, Variaveis do sistema), procurar "Path", selecione-o e clique em "Editar". Adicione o path do Bin e salve.
 ###### Obs.: O nosso MySQL foi instalado pelo WAMP. Assim, o path considerado deve ser o setado pelo WAMP (C:\wamp64\bin\mysql\mysql5.7.14\bin)
@@ -65,7 +71,7 @@
 
 ## Download do MySQL Wokbench (MySQL Community Downloads - gratuito) - MySQL Workbench 8.0.29
 ### Ferramenta gerenciadora para manipular o BD de forma visual:
->- https://dev.mysql.com/downloads/workbench/
+[MySQL Workbench] (https://dev.mysql.com/downloads/workbench/)
 
 #### Criando a tabela "contas_pagars" pela ferramenta gráfica:
 ```CREATE TABLE `celke`.`contas_pagars` ( `id` INT NOT NULL AUTO_INCREMENT , `nome` VARCHAR(220) NULL , `valor` DOUBLE NULL , PRIMARY KEY (`id`));```
@@ -78,7 +84,7 @@
 
 ## INSTALANDO EXTENSÃO DO PACOTE MYSQL NO NOSSO PROJETO
 ### Download da extensão MySQL (seguir os passos da url abaixo)
->- https://www.npmjs.com/package/mysql
+[NPM - Extensão para MySQL] (https://www.npmjs.com/package/mysql)
 ```npm install mysql --save```
 
 ###### Obs.: podemos ter algum problema caso o MySQL seja uma versão superior a 8
@@ -91,7 +97,7 @@
 
 #### Uma vez finalizadas as permissões que você quer definir para os seus novos usuários, certifique-se sempre de recarregar todos os privilegios:
 ```FLUSH PRIVILEGES;```
-
+***
 
 # ___________________________________________________________
 # OBSERVACOES:
