@@ -16,14 +16,17 @@ connection.connect(function (err) {
     console.log('connected as id ' + connection.threadId);
 });
 
-// aula08 - inserindo um usuario
-connection.query("INSERT INTO users(nome, email) VALUES ('Kelly', 'kelly@gmail.com')", function(err, result){
-    if(!err){
-        console.log('Usuario cadastrado com sucesso!')
-    } else{
-        console.log('Erro ao cadastrar o usuario!')
-    }
-})
+// AULA 8 - INSERINDO UM USUÁRIO - FUNCIONA NORMALMENTE - COMENTADO ABAIXO PARA NAO ATRAPALHAR DA AULA 9 EM DIANTE
+// connection.query("INSERT INTO users(nome, email) VALUES ('Kelly', 'kelly@gmail.com')", function(err, result){
+//     if(!err){
+//         console.log('Usuario cadastrado com sucesso!')
+//     } else{
+//         console.log('Erro ao cadastrar o usuario!')
+//     }
+// })
+
+// AULA 9 - ATUALIZANDO UM USUARIO
+connection.query("UPDATE users SET nome = ''") 
 
 // CONSULTANDO DIRETO NO BANCO
 connection.query('SELECT * FROM users', function(err, rows, fields){
