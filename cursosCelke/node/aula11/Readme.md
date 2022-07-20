@@ -1,5 +1,6 @@
 # AULA 11 - COMO INSTALAR E USAR O SEQUELIZE NO NODE.JS
-## **UTILIZAR O aula07 COMO PACOTE PARA ESTUDOS**
+## Sequelize is an easy-to-use and promise-based Node.js ORM tool for Postgres, MySQL, MariaDB, SQLite, DB2, Microsoft SQL Server, and Snowflake. It features solid transaction support, relations, eager and lazy loading, read replication and more.
+[NPM - Explicação e Instalação do Sequilize](https://www.npmjs.com/package/sequelize)
 
 ### Criar tabela com Sequelize
 
