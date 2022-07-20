@@ -44,6 +44,7 @@
 ###### Obs.: O nosso MySQL foi instalado pelo WAMP. Assim, o path considerado deve ser o setado pelo WAMP (C:\wamp64\bin\mysql\mysql5.7.14\bin). Então é necessário primeiramente executar o arquivo 'mysqld' (serviço) e, somente depois, rodar a linha de acesso do mysql, dentro já do diretório onde o mysql foi instalado (no nosso caso: C:\wamp64\bin\mysql\mysql5.7.14\bin)
 `mysql -u root -p`
 **###### Referência:** 
+> http://blog.tiagopassos.com/2010/10/12/acessar-o-mysql-pelo-prompt-do-windows/
 > https://stackoverflow.com/questions/17426052/error-2003-hy000-cant-connect-to-mysql-server-on-localhost-10061
 
 ### OBS.: todas as linhas de comando do MySQL devem terminar com ";"

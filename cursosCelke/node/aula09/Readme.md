@@ -1,17 +1,14 @@
-# AULA 09 - NODEMON - Como editar registro no banco de dados MySQL com Node
+# AULA 09 - Como editar registro no banco de dados MySQL com Node
 ## **UTILIZAR O aula07 COMO PACOTE PARA ESTUDOS**
 
-### Criando a coluna id na table users:
-`ALTER TABLE `users` ADD `id` INT NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`id`);`
-
-### INSERÇÃO NO BD MySQL
-```connection.query("INSERT INTO users(nome, email) VALUES ('Kelly', 'kelly@gmail.com')", function(err, result){
+### UPDATE NO BD MySQL
+```connection.query("UPDATE users SET nome = 'Gustavo Jesus' WHERE id = 1", function(err, result){
     if(!err){
-        console.log('Usuario cadastrado com sucesso!')
+        console.log('Usuario ATUALIZADO com sucesso!')
     } else{
-        console.log('Erro ao cadastrar o usuario!')
+        console.log('Erro ao ATUALIZAR o usuario!')
     }
-})
+}) 
 ```
 
 

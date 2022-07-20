@@ -1,4 +1,4 @@
-# AULA 08 - NODEMON - Como cadastrar com Node.js no banco de dados
+# AULA 08 - Como cadastrar com Node.js no banco de dados
 ## **DESSA AULA EM DIANTE VAMOS UTILIZAR O aula07 COMO PACOTE PARA ESTUDOS**
 
 ### Criando a coluna id na table users:
