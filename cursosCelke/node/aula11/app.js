@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 // criando o acesso do Sequelize com o BD
-const sequelize = new Sequelize('celke', 'root', 'password', {
+const sequelize = new Sequelize('celke', 'root', '', {
     host: 'localhost',
     dialect: 'mysql'
 });
@@ -26,3 +26,9 @@ const Pagtos = sequelize.define('pagamentos', {
 // Pagtos.sync( {force: true} ); //Sync: comando para criar a tabela. force: true forca a criar a table
 // Apos usado o comando sync e ter a tabela criada, comentar para nao ficar recriando toda vez que rodar o Node
 /* //*! o Sequelize irá criar automaticament os campos: id (inteiro nao nulo auto-incremento), createdAt (como datatime not null) e updatedAt(como datatime not null). ENGINE= InnoDB*/
+
+// Inserindo registro na tabela criada
+Pagtos.create({
+    nome: "Energia",
+    valor: 220
+})

@@ -44,8 +44,8 @@ sequelize.authenticate().then(function(){
     * `DROP TABLE <nomeDaTabela>;`
 
 * Criando a tabela com Sequelize:
-    * ```
-    __Criando uma tabela na BD usando o Sequelize__
+    * __Criando uma tabela na BD usando o Sequelize__
+    ```
     const Pagtos = sequelize.define('pagamentos', {
         // atributos - nome das colunas
         nome:{
@@ -57,19 +57,18 @@ sequelize.authenticate().then(function(){
     })
     Pagtos.sync( {force: true} ); //Sync: comando para criar a tabela. force: true forca a criar a table
     ```
-    ** Apos usado o comando sync e ter a tabela criada, comentar para nao ficar recriando toda vez que rodar o Node**
-    __o Sequelize irá criar automaticament os campos: id (inteiro nao nulo auto-incremento), createdAt (como datatime not null) e updatedAt(como datatime not null). ENGINE= InnoDB__
+    **Apos usado o comando sync e ter a tabela criada, comentar para nao ficar recriando toda vez que rodar o Node**
+    __O Sequelize irá criar automaticament os campos: id (inteiro nao nulo auto-incremento), createdAt (como datatime not null) e updatedAt(como datatime not null). ENGINE= InnoDB__
 
 
-### Inserir registro n obanco de dados com Sequelize
-```connection.query("UPDATE users SET nome = 'Gustavo Jesus' WHERE id = 1", function(err, result){
-    if(!err){
-        console.log('Usuario ATUALIZADO com sucesso!')
-    } else{
-        console.log('Erro ao ATUALIZAR o usuario!')
-    }
-}) 
-```
+* Inserir registro no banco de dados com Sequelize
+    * [Model Querying - Basics](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/)
+    ```
+    Pagtos.create({
+        nome: "Energia",
+        valor: 220
+    })
+    ```
 
 
 
