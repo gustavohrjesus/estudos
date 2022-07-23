@@ -21,7 +21,7 @@
     * Para listar pagamentos
     ```
     app.get('/pagamento', function(req, res){
-        ~~res.send("Pagina para LISTAR pagamento")~~ __**// para testar se aparece no navegador. URL: http://localhost:8080/pagamento**__
+        // res.send("Pagina para LISTAR pagamento")~~ __**// para testar se aparece no navegador. URL: http://localhost:8080/pagamento**__
         res.render('pagamento') // renderiza a pagina views/pagamento.handlesbars
     })
     ```
@@ -29,7 +29,7 @@
     * Para cadastrar pagamentos (formulario)
     ```
     app.get('/add-pagamento', function(req, res){
-        ~~// res.send("Formulario para CADASTRAR pagamento")~~ __**// para testar se aparece no navegador. URL: http://localhost:8080/add-pagamento**__
+        // res.send("Formulario para CADASTRAR pagamento")~~ __**// para testar se aparece no navegador. URL: http://localhost:8080/add-pagamento**__
         res.render('add-pagamento') // renderiza a pagina views/pagamento.handlebars
     })
 
