@@ -9,65 +9,29 @@
         * `npm install --save express-handlebars`
         * #### Adicionamos o 'express-' para informar que vamos usar o handlebars exclusivo para express
 
-# SEQUELIZE
-## Sequelize is an easy-to-use and promise-based Node.js ORM tool for Postgres, MySQL, MariaDB, SQLite, DB2, Microsoft SQL Server, and Snowflake. It features solid transaction support, relations, eager and lazy loading, read replication and more.
-[NPM - Explicação do Sequelize](https://www.npmjs.com/package/sequelize)
+## Chamando o handlebars
+* A linha abaixo, no video, nao estava funcionando somente: handlebars({defaultLayout: 'main'}). Então foi adicionado o ".engine". 
+    * `app.engine('handlebars', handlebars.engine({ defaultLayout: 'main' })) // essa era a linha no video (sem o .engine) e nao funcionou`
+* Desta forma abaixo funcionou (era handlebars e ficou handlebars.engine para funcionar)
+    * `app.engine('handlebars', handlebars.engine({ defaultLayout: 'main' })) //chama o views/layouts/main.handlebars - funciona`
 
-* Instalação do Sequelize:
-    * [Sequelize - Instalacao](https://sequelize.org/docs/v6/getting-started/)
-        * `npm install --save sequelize`
-* Indicar qual bando de dados sera utilizado (No nosso caso, o MySQL):
-    * `npm install --save mysql2`
 
-### Configurando a conexão do Sequelize com o BD
-`const Sequelize = require('sequelize');`
-```
-const sequelize = new Sequelize('celke', 'user', 'password', {
-  host: 'localhost',
-  dialect: 'mysql'
-  /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
-});
-```
-#### Testando a conexão
-```
-sequelize.authenticate().then(function(){
-    console.log('Conexao realizada com sucesso!')
-}).catch(function(err){
-    console.log("Erro ao realizar a conexao com o BD: " + err);
-})
-```
-
-### CRIAR UMA TABELA COM SEQUELIZE
-* Obs.: antes iremos excluir as tabelas que já temos no nosso BD. Dentro do terminal do MySQL, deletamos a table com o comando abaixo:
-    * `DROP TABLE <nomeDaTabela>;`
-
-* Criando a tabela com Sequelize:
-    * __Criando uma tabela na BD usando o Sequelize__
+### CRIANDO ROTAS PARA AS PÁGINAS add-pagamento e pagamento
+* Rotas
+    * Para listar pagamentos
     ```
-    const Pagtos = sequelize.define('pagamentos', {
-        // atributos - nome das colunas
-        nome:{
-            type: Sequelize.STRING,
-        },
-        valor: {
-            type: Sequelize.DOUBLE
-        }
-    })
-    Pagtos.sync( {force: true} ); //Sync: comando para criar a tabela. force: true forca a criar a table
-    ```
-    **Apos usado o comando sync e ter a tabela criada, comentar para nao ficar recriando toda vez que rodar o Node**
-    __O Sequelize irá criar automaticament os campos: id (inteiro nao nulo auto-incremento), createdAt (como datatime not null) e updatedAt(como datatime not null). ENGINE= InnoDB__
-
-
-* Inserir registro no banco de dados com Sequelize
-    * [Model Querying - Basics](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/)
-    ```
-    Pagtos.create({
-        nome: "Energia",
-        valor: 220
+    app.get('/pagamento', function(req, res){
+        ~~res.send("Pagina para LISTAR pagamento")~~ __**// para testar se aparece no navegador. URL: http://localhost:8080/pagamento**__
+        res.render('pagamento') // renderiza a pagina views/pagamento.handlesbars
     })
     ```
 
+    * Para cadastrar pagamentos (formulario)
+    ```
+    app.get('/add-pagamento', function(req, res){
+        ~~// res.send("Formulario para CADASTRAR pagamento")~~ __**// para testar se aparece no navegador. URL: http://localhost:8080/add-pagamento**__
+        res.render('add-pagamento') // renderiza a pagina views/pagamento.handlebars
+    })
 
 
 > Obs.: instalamos o nodemon dentro do diretorio /cursosCelke/node
