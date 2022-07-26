@@ -1,1 +1,8 @@
 <h1>LISTAR PAGAMENTO</h1>
+
+{{!-- pagtos vem do arquivo app.js --}}
+{{#each pagtos}}
+    Nome: {{nome}}<br>
+    Valor: {{valor}}<br>
+    Cadastrado: {{#formatDate createdAt}}{{/formatDate}} <br>
+{{/each}}

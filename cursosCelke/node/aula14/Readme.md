@@ -1,22 +1,8 @@
-# AULA 13 - COMO CRIAR O FORMULÁRIO COM NODE E SALVAR NO BANCO DE DADOS
-**ATENTAR PARA A ROTA DO CADASTRO DE PAGAMENTO - anteriormente era add-pagamento e, agora, cad-pagamento**
+# AULA 14 - COMO LISTAR REGISTROS DO BANCO DE DADOS COM NODE.JS
+### __**UTILIZAR PROJETO aula13 PARA ALTERACAO/INSERCAO DOS CODIGOS **__
 
-# __**QUANDO VAMOS UPAR NOSSO PROJETO, NÃO PRECISAMOS MANDA O NODE-MODULES. PRECISAMOS APENAS DAR UM UPDATE NO PROJETO JÁ NO LOCAL NOVO QUE O RESTO SERÁ ATUALIZADO**__
-
-## ADICIONANDO A EXTENSAO BODY-PARSER PARA PEGAR AS INFORMACOES DO FORM E ENVIAR PARA O BD
-[Body-parser](https://www.npmjs.com/package/body-parser)
-* Instalacao do body-parser - --save é utilizado para inserir no package.json todas as dependencias utilizadas. No nosso caso, mais esta do body-parser
-    * `npm install body-parser`
-
-* Importando o body-parser para o arquivo
-    * `const bodyParser = require("body-parser")`
-
-* Configurando o body-parser no arquivo
-    * // parse application/x-www-form-unlencoded
-        * `app.use(bodyParser.urlencoded({ extended: false }))`
-    * // parse application/json
-        * `app.use(bodyParser.json())`
-
+## INSTALANDO A EXTENSÃO MOMENT PARA FORMATAR HORA E DATA
+`npm install --save moment`
 
 ### CRIANDO ROTAS PARA AS PÁGINAS add-pagamento e pagamento
 * Rotas
@@ -52,5 +38,5 @@
     })
     ```
 
-
+> __**QUANDO VAMOS UPAR NOSSO PROJETO, NÃO PRECISAMOS MANDA O NODE-MODULES. PRECISAMOS APENAS DAR UM UPDATE NO PROJETO JÁ NO LOCAL NOVO QUE O RESTO SERÁ ATUALIZADO**__
 > Obs.: instalamos o nodemon dentro do diretorio /cursosCelke/node
