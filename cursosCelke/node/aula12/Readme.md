@@ -11,10 +11,9 @@
 
 ## Chamando o handlebars
 * A linha abaixo, no video, nao estava funcionando somente: handlebars({defaultLayout: 'main'}). Então foi adicionado o ".engine". 
-    * `app.engine('handlebars', handlebars.engine({ defaultLayout: 'main' })) // essa era a linha no video (sem o .engine) e nao funcionou`
+    * `app.engine('handlebars', handlebars({ defaultLayout: 'main' })) // essa era a linha no video (sem o .engine) e nao funcionou`
 * Desta forma abaixo funcionou (era handlebars e ficou handlebars.engine para funcionar)
     * `app.engine('handlebars', handlebars.engine({ defaultLayout: 'main' })) //chama o views/layouts/main.handlebars - funciona`
-
 
 ### CRIANDO ROTAS PARA AS PÁGINAS add-pagamento e pagamento
 * Rotas
