@@ -150,15 +150,6 @@
 
 # AULA 11 - COMO INSTALAR E USAR O SEQUELIZE NO NODE.JS
 
-## Iniciar o MySQL pelo terminal:
-* C:\wamp64\bin\mysql\mysql5.7.14\bin
-    * Executar o mysqld
-    * `mysql -u root -p`
-        * Irá pedir a senha do MySQL
-
-## MUDANDO PARA O BANCO DE DADOS QUE SERA USADO
-* `USE 'celke';`
-
 # SEQUELIZE
 ## Sequelize is an easy-to-use and promise-based Node.js ORM tool for Postgres, MySQL, MariaDB, SQLite, DB2, Microsoft SQL Server, and Snowflake. It features solid transaction support, relations, eager and lazy loading, read replication and more.
 [NPM - Explicação do Sequelize](https://www.npmjs.com/package/sequelize)
@@ -261,3 +252,13 @@ sequelize.authenticate().then(function(){
 # ___________________________________________________________
 # OBSERVACOES:
 >- Instalamos o nodemon dentro do diretorio /cursosCelke/node
+
+## Iniciar o MySQL pelo terminal:
+* C:\wamp64\bin\mysql\mysql5.7.14\bin
+    * Executar o mysqld
+    * `mysql -u root -p`
+        * Irá pedir a senha do MySQL
+
+## MUDANDO PARA O BANCO DE DADOS QUE SERA USADO
+* `USE 'celke';`
+***
