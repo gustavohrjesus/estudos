@@ -4,6 +4,8 @@ const bodyParser = require("body-parser")
 
 const app = express();
 
+const pagamento = require('./models/Pagamento') // importa o Pagamento.js
+
 // AULA 12 -  a linha abaixo, no video, nao estava funcionando somente: handlebars({defaultLayout: 'main'})
 // então foi adicionado o ".engine". Desta forma, funcionou
 app.engine('handlebars', handlebars.engine({ defaultLayout: 'main' })) //chama o views/layouts/main.handlebars - funciona
@@ -28,7 +30,16 @@ app.get('/cad-pagamento', function(req, res){
 // AULA 13 - metodo POST - para envio das infos do form cad-pagamento.handlebars
 // usada extensao body-parser (https://www.npmjs.com/package/body-parser)
 app.post('/add-pagamento', function(req, res){ // req.body.nome pega o valor do input 'nome ' do form em cad-pagamento.handlebars
-    res.send("Nome: " + req.body.nome + "<br>Valor: " + req.body.valor + "<br>");
+    // res.send("Nome: " + req.body.nome + "<br>Valor: " + req.body.valor + "<br>"); // linha para teste
+    pagamento.create({
+        nome: req.body.nome,
+        valor: req.body.valor
+    }).then(function(){
+        // res.send("Pagamento cadastrado com sucesso!") // se aparecer, cadastrou corretamente - Teste: OK
+        res.redirect('/pagamento') // redireciona para pagamento apos inserir info no bd - OK
+    }).catch(function(erro){
+        res.send("Erro: Pagamento nao foi cadastrado com sucesso!" + erro)
+    })
 })
 
 app.listen(8080);
