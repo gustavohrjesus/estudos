@@ -26,8 +26,8 @@ app.use(bodyParser.json())
 // AULA 12 - Rotas
 app.get('/pagamento', function(req, res){
     // res.send("Pagina para LISTAR pagamento") // para testar se aparece no navegador. URL: http://localhost:8080/pagamento
-    Pagamento.findAll().then(function(pagamentos){ // pega todos os dados do BD - Comando do Sequelize: findAll
-        res.render('pagamento', { 
+    Pagamento.findAll( {order: [['id', 'DESC']]} ).then(function(pagamentos){ // pega todos os dados do BD - Comando do Sequelize: findAll
+        res.render('pagamento', { // order: id DESC ordena decrescente
             // pagamentos: pagamentos // SEGUINDO O VIDEO, essa linha nao funcionou. Foi substituida pela linha abaixo
             pagtos: pagamentos.map(pagamento => pagamento.toJSON())
         }) // renderiza a pagina views/pagamento.handlesbars. pagtos eh usado em pagamento.handlebars

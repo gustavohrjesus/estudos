@@ -2,7 +2,9 @@
 
 {{!-- pagtos vem do arquivo app.js --}}
 {{#each pagtos}}
+    ID: {{id}}<br>
     Nome: {{nome}}<br>
     Valor: {{valor}}<br>
     Cadastrado: {{#formatDate createdAt}}{{/formatDate}} <br>
+    <hr>
 {{/each}}
