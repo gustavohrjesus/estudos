@@ -266,6 +266,13 @@ sequelize.authenticate().then(function(){
         * `app.use(bodyParser.json())`
 ***
 
+# AULA 14 - COMO LISTAR REGISTROS DO BANCO DE DADOS COM NODE.JS
+### __**UTILIZAR PROJETO aula13 PARA ALTERACAO/INSERCAO DOS CODIGOS **__
+
+## INSTALANDO A EXTENSÃO MOMENT PARA FORMATAR HORA E DATA
+`npm install --save moment`
+***
+
 
 
 
